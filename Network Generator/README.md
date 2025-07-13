@@ -34,7 +34,7 @@ Builds different types of arcs:
 
 Trip arcs
 
-Layover arcs
+deadheading arcs
 
 Charging arcs
 
