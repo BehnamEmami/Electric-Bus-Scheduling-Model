@@ -41,5 +41,6 @@ Charging arcs
 Depot and sink arcs
 
 📦 Required Packages
-from datetime import datetime, timedelta
-import pandas as pd
+
+datetime
+pandas
