@@ -1,3 +1,41 @@
+"""
+Spatial-Temporal-SOC Network Generator
+--------------------------------------
+
+This script generates a time-expanded network with energy (SOC) dimensions
+for Battery Electric Bus (BEB) scheduling. It includes:
+
+- Time discretization (operational & non-operational)
+- Node generation (Depot, Terminal, Charging Station, Sink)
+- Arc/link generation for:
+  * Pull-in/Pull-out
+  * Trip arcs
+  * Idle arcs
+  * Deadheading (Terminal <-> Terminal/Charging)
+  * Charging arcs (with tariff)
+
+Input files required:
+- Bus_Trip_Timetable.csv
+- Terminals.csv
+- Charging stations.csv
+- Charging_Costs_by_Time_Interval.csv
+
+Output files generated:
+- all_nodes.csv
+- pull-In-Links.csv
+- pull-Out-Links.csv
+- Triplinknew.csv
+- idle_links.csv
+- deadheading_links_df.csv
+- deadheading_links-TC_df.csv
+- deadheading_links-CT_df.csv
+- deadheading_links-CC_df.csv
+- FinalLinks.csv
+
+Author: Behnam Emami
+"""
+
+
 from datetime import datetime, timedelta
 import pandas as pd
 
